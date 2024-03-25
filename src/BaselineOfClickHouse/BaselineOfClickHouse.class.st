@@ -1,3 +1,8 @@
+"
+# BaselineOfClickHouse
+
+Baselines allow us to manage dependencies and specify how the repository should be loaded.
+"
 Class {
 	#name : 'BaselineOfClickHouse',
 	#superclass : 'BaselineOf',
