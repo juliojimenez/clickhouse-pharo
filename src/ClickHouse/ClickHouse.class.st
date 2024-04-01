@@ -17,6 +17,16 @@ Class {
 }
 
 { #category : 'accessing' }
+ClickHouse >> database [
+	^ database
+]
+
+{ #category : 'accessing' }
+ClickHouse >> database: aDatabase [
+	database := aDatabase.
+]
+
+{ #category : 'accessing' }
 ClickHouse >> host [
 	^ host
 ]
