@@ -7,6 +7,7 @@ Class {
 	#instVars : [
 		'host',
 		'port',
+		'ssl',
 		'database',
 		'user',
 		'password'
