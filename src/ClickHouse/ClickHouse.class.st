@@ -37,6 +37,17 @@ ClickHouse >> host: aHost [
 ]
 
 { #category : 'accessing' }
+ClickHouse >> password [
+	^ password
+]
+
+{ #category : 'accessing' }
+ClickHouse >> password: aPassword [
+	password := aPassword.
+
+]
+
+{ #category : 'accessing' }
 ClickHouse >> port [
 	^ port
 ]

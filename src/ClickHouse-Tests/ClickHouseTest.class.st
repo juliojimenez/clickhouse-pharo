@@ -42,7 +42,7 @@ ClickHouseTest >> testHost [
 ClickHouseTest >> testPassword [
 	| testValue |
 	testValue := 'supersecretpassword'.
-	clickHouseInstance password testValue.
+	clickHouseInstance password: testValue.
 	self assert: clickHouseInstance password equals: testValue.
 ]
 
