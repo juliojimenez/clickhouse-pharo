@@ -25,3 +25,13 @@ ClickHouse >> host [
 ClickHouse >> host: aHost [
 	host := aHost.
 ]
+
+{ #category : 'accessing' }
+ClickHouse >> port [
+	^ port
+]
+
+{ #category : 'accessing' }
+ClickHouse >> port: aPort [
+	port := aPort.
+]
