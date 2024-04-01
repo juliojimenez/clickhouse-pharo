@@ -35,3 +35,13 @@ ClickHouse >> port [
 ClickHouse >> port: aPort [
 	port := aPort.
 ]
+
+{ #category : 'accessing' }
+ClickHouse >> ssl [
+	^ ssl
+]
+
+{ #category : 'accessing' }
+ClickHouse >> ssl: aSsl [
+	ssl := aSsl.
+]
