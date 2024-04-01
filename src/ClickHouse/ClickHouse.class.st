@@ -15,3 +15,13 @@ Class {
 	#category : 'ClickHouse',
 	#package : 'ClickHouse'
 }
+
+{ #category : 'accessing' }
+ClickHouse >> host [
+	^ host
+]
+
+{ #category : 'accessing' }
+ClickHouse >> host: aHost [
+	host := aHost.
+]
