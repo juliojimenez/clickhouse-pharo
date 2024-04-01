@@ -55,3 +55,13 @@ ClickHouse >> ssl [
 ClickHouse >> ssl: aSsl [
 	ssl := aSsl.
 ]
+
+{ #category : 'accessing' }
+ClickHouse >> user [
+	^ user
+]
+
+{ #category : 'accessing' }
+ClickHouse >> user: aUser [
+	user := aUser.
+]
