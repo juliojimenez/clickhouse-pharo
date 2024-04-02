@@ -19,7 +19,14 @@ ClickHouseTest >> testCreateClickHouse [
 	"Test if the creation of an object ClickHouse is done properly"
 	|tmp|
 	tmp := ClickHouse new.
-	self assert: tmp isNotNil 
+	self assert: tmp isNotNil.
+	self assert: tmp host equals: 'localhost'.
+	self assert: tmp port equals: 8123.
+	self assert: tmp ssl equals: false.
+	self assert: tmp user equals: 'default'.
+	self assert: tmp password equals: ''.
+	self assert: tmp database equals: 'default'.
+	
 ]
 
 { #category : 'running' }
@@ -42,7 +49,7 @@ ClickHouseTest >> testHost [
 ClickHouseTest >> testPassword [
 	| testValue |
 	testValue := 'supersecretpassword'.
-	clickHouseInstance password testValue.
+	clickHouseInstance password: testValue.
 	self assert: clickHouseInstance password equals: testValue.
 ]
 
