@@ -36,6 +36,18 @@ ClickHouse >> host: aHost [
 	host := aHost.
 ]
 
+{ #category : 'initialization' }
+ClickHouse >> initialize [ 
+	super initialize.
+	host := 'default'.
+	port := 8123.
+	ssl := false.
+	database := 'default'.
+	user := 'default'.
+	password := ''.
+
+]
+
 { #category : 'accessing' }
 ClickHouse >> password [
 	^ password
