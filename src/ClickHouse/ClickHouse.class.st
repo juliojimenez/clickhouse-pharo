@@ -39,7 +39,7 @@ ClickHouse >> host: aHost [
 { #category : 'initialization' }
 ClickHouse >> initialize [ 
 	super initialize.
-	host := 'default'.
+	host := 'localhost'.
 	port := 8123.
 	ssl := false.
 	database := 'default'.
