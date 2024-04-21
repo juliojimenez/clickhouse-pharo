@@ -10,8 +10,8 @@ Class {
 
 { #category : 'running' }
 ClickHouseTest >> setUp [
-	clickHouseInstance := ClickHouse new.
-
+	super setUp.
+	clickHouseInstance := ClickHouseHttp new.
 ]
 
 { #category : 'running' }
@@ -54,11 +54,29 @@ ClickHouseTest >> testPassword [
 ]
 
 { #category : 'running' }
+ClickHouseTest >> testPing [
+    "Test the ping method to ensure the server is reachable"
+    self assert: (clickHouseInstance ping includesSubstring: 'Ok.').
+]
+
+{ #category : 'running' }
 ClickHouseTest >> testPort [
 	| testValue |
 	testValue := 8123.
 	clickHouseInstance port: testValue.
 	self assert: clickHouseInstance port equals: testValue.
+]
+
+{ #category : 'running' }
+ClickHouseTest >> testQuery [
+    "Test the query method with a known query that should succeed"
+    self assert: ((clickHouseInstance query: 'SELECT 1') includesSubstring: '1').
+]
+
+{ #category : 'running' }
+ClickHouseTest >> testReplicas [
+    "Test the replicas method to ensure it returns expected data"
+    self assert: (clickHouseInstance replicas includesSubstring: 'Ok.').
 ]
 
 { #category : 'running' }

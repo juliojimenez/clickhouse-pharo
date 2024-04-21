@@ -10,7 +10,8 @@ Class {
 		'ssl',
 		'database',
 		'user',
-		'password'
+		'password',
+		'timeout'
 	],
 	#category : 'ClickHouse',
 	#package : 'ClickHouse'
@@ -77,6 +78,16 @@ ClickHouse >> ssl [
 { #category : 'accessing' }
 ClickHouse >> ssl: aSsl [
 	ssl := aSsl.
+]
+
+{ #category : 'accessing' }
+ClickHouse >> timeout [
+	^ timeout
+]
+
+{ #category : 'accessing' }
+ClickHouse >> timeout: aTimeout [
+	timeout := aTimeout.
 ]
 
 { #category : 'accessing' }
